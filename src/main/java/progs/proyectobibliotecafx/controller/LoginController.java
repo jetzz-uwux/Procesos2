@@ -66,7 +66,6 @@ public class LoginController {
             // 3. Crear la nueva escena y mostrarla
             Scene scene = new Scene(root);
 
-            // OPCIONAL: Volver a cargar el CSS y las fuentes si es necesario
             scene.getStylesheets().add(getClass().getResource("/fonts/fuentes.css").toExternalForm());
 
             stage.setScene(scene);
