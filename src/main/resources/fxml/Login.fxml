@@ -15,7 +15,7 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="364.0" prefWidth="422.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button layoutX="146.0" layoutY="273.0" mnemonicParsing="false" style="-fx-background-color: #8cb6cf;" text="Iniciar sesión">
+                  <Button fx:id="btn_iniciarsesion" layoutX="146.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleLogin" style="-fx-background-color: #8cb6cf;" text="Iniciar sesión">
                      <styleClass>
                         <String fx:value="boton-redondo" />
                         <String fx:value="fuente-perfectP" />
