@@ -30,7 +30,7 @@ public class App extends Application {
 
         //Conexión a sql
         try {           
-            lib.SqlLib.getInstance("jdbc:mysql://localhost:3306/biblioteca", "root", "camila06");
+            lib.SqlLib.getInstance("jdbc:mysql://localhost:3306/biblioteca", "root", "Jetzalytc01*");
             System.out.println(">>> DEBUG: Llamando a SqlLib desde el arranque de App");
         } catch (Exception e) {
             System.err.println(">>> ERROR: Falló la conexión inicial: " + e.getMessage());

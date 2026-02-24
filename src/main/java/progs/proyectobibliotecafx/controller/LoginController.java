@@ -14,6 +14,7 @@ public class LoginController {
     @FXML private TextField txtUsuario;
     @FXML private PasswordField txtPassword;
     @FXML Button btn_crearcuenta ;
+    @FXML Button btn_iniciarsesion;
 
     @FXML
     private void handleLogin(ActionEvent event) {
@@ -24,6 +25,26 @@ public class LoginController {
         // Validación básica estática
         if (user.equals("admin") && pass.equals("123")) {
             System.out.println("¡Bienvenido!");
+        try {
+        // 1. Cargar el nuevo archivo FXML
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainView.fxml"));
+        Parent root = loader.load();
+
+        // 2. Obtener el Stage (la ventana) actual desde el botón que se presionó
+        Stage stage = (Stage) btn_iniciarsesion.getScene().getWindow();
+
+        // 3. Crear la nueva escena y mostrarla
+        Scene scene = new Scene(root);
+        
+        // OPCIONAL: Volver a cargar el CSS y las fuentes si es necesario
+        scene.getStylesheets().add(getClass().getResource("/fonts/fuentes.css").toExternalForm());
+        
+        stage.setScene(scene);
+        stage.show();
+        
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
 
         } else {
             System.out.println("Usuario o contraseña incorrectos");
