@@ -134,6 +134,20 @@ public class SqlLib {
         }
     }
 
+    // MÉTODO PARA ELIMINAR USUARIO
+    public boolean eliminarUsuario(String username) {
+        String query = "{ CALL sp_EliminarUsuario(?) }";
+        try (PreparedStatement statement = connection.prepareCall(query)) {
+            statement.setString(1, username);
+
+            int filasAfectadas = statement.executeUpdate();
+            return filasAfectadas > 0; // Devuelve true si encontró al usuario y lo borró
+        } catch (SQLException e) {
+            System.err.println("Error al eliminar usuario: " + e.getMessage());
+            return false;
+        }
+    }
+
     // MÉTODO PARA VALIDAR (Login)
     public boolean isValidCredentials(String username, String password) throws SQLException {
         String query = "SELECT contrasena FROM usuario WHERE nombre = ? AND is_deleted = 0";
