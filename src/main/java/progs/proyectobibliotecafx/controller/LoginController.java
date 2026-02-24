@@ -29,7 +29,7 @@ public class LoginController {
             // 1. Obtener la instancia de la base de datos
             SqlLib db = SqlLib.getInstance(null, null, null);
 
-            // 2. USAR TU MÉTODO DE LA BASE DE DATOS
+            // 2. USAR MÉTODO DE LA BASE DE DATOS
             if (db.isValidCredentials(user, pass)) {
                 System.out.println("¡Login exitoso desde la BD!");
 
