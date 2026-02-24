@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="progs.proyectobibliotecafx.controller.ReporteDialogController">
+
+    <top>
+        <Label text="Consultas de Administrador"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="15" bottom="10" left="0" right="0"/>
+            </BorderPane.margin>
+        </Label>
+    </top>
+
+    <center>
+        <TabPane fx:id="tabPane">
+
+            <Tab text="Autor">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <children>
+                        <HBox spacing="10">
+                            <Label text="Autor"/>
+                            <TextField fx:id="txtAutor" prefWidth="250"/>
+                            <Button text="Generar reporte" onAction="#handleReporteAutor"/>
+                        </HBox>
+                        <TextArea fx:id="areaAutor" prefHeight="450"/>
+                    </children>
+                </VBox>
+            </Tab>
+
+            <Tab text="Ubicación">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <children>
+                        <HBox spacing="10">
+                            <Label text="Ubicación"/>
+                            <TextField fx:id="txtUbicacion" prefWidth="250"/>
+                            <Button text="Generar reporte" onAction="#handleReporteUbicacion"/>
+                        </HBox>
+                        <TextArea fx:id="areaUbicacion" prefHeight="450"/>
+                    </children>
+                </VBox>
+            </Tab>
+
+            <Tab text="Préstamo">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <children>
+                        <Button text="Mostrar reporte" onAction="#handleReportePrestamos"/>
+                        <TextArea fx:id="areaPrestamos" prefHeight="450"/>
+                    </children>
+                </VBox>
+            </Tab>
+
+            <Tab text="Libros disponibles">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <children>
+                        <Button text="Mostrar reporte" onAction="#handleReporteDisponibles"/>
+                        <TextArea fx:id="areaDisponibles" prefHeight="450"/>
+                    </children>
+                </VBox>
+            </Tab>
+
+            <Tab text="Préstamos por día">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <children>
+                        <HBox spacing="10">
+                            <Label text="Fecha (YYYY-MM-DD)"/>
+                            <TextField fx:id="txtFechaReporte" prefWidth="200"/>
+                            <Button text="Generar reporte" onAction="#handleReporteFecha"/>
+                        </HBox>
+                        <TextArea fx:id="areaFecha" prefHeight="450"/>
+                    </children>
+                </VBox>
+            </Tab>
+
+            <Tab text="Préstamos que vencen hoy">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <children>
+                        <Button text="Mostrar préstamos que vencen hoy" onAction="#handlePrestamosHoy"/>
+                        <TextArea fx:id="areaVencenHoy" prefHeight="450"/>
+                    </children>
+                </VBox>
+            </Tab>
+
+        </TabPane>
+    </center>
+
+</BorderPane>

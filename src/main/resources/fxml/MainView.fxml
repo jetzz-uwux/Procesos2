@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progs.proyectobibliotecafx.controller.MainViewController">
+
+    <!-- TOP -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 10;">
+            <Button onAction="#handleReportes" text="Reportes" />
+            <Button onAction="#handlePrestamos" text="Préstamos" />
+            <Button onAction="#handleSocios" text="Socios" />
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <TextField fx:id="txtBuscar" promptText="Buscar libro..." />
+            <Button onAction="#handleBuscar" text="Buscar" />
+        </HBox>
+    </top>
+
+    <!-- CENTER -->
+    <center>
+        <TableView fx:id="tablaLibros">
+            <columns>
+                <TableColumn fx:id="colIsbn" text="ISBN" />
+                <TableColumn fx:id="colTitulo" text="Título" />
+                <TableColumn fx:id="colEdicion" text="Edición" />
+                <TableColumn fx:id="colAnio" text="Año" />
+                <TableColumn fx:id="colFormato" text="Formato" />
+                <TableColumn fx:id="colPaginas" text="Páginas" />
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- BOTTOM -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="30" style="-fx-padding: 10;">
+            <Button onAction="#handlePrestar" text="Prestar" />
+            <Button onAction="#handleNuevo" text="Nuevo" />
+            <Button onAction="#handleEditar" text="Editar" />
+            <Button onAction="#handleEliminar" text="Eliminar" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

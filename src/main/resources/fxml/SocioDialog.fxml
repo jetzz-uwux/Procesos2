@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="progs.proyectobibliotecafx.controller.SocioDialogController">
+
+    <!-- TOP (Buscar) -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <TextField fx:id="txtBuscar" promptText="Buscar socio..." prefWidth="250"/>
+                <Button text="Buscar" onAction="#handleBuscar"/>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- CENTER (Tabla) -->
+    <center>
+        <TableView fx:id="tablaSocios">
+
+            <columns>
+                <TableColumn fx:id="colNoSocio" text="No. Socio" prefWidth="100"/>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200"/>
+                <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="200"/>
+                <TableColumn fx:id="colEmail" text="Email" prefWidth="200"/>
+                <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="150"/>
+            </columns>
+
+        </TableView>
+    </center>
+
+    <!-- BOTTOM (Botones) -->
+    <bottom>
+        <HBox spacing="30" alignment="CENTER">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <children>
+                <Button text="Nuevo" onAction="#handleNuevo"/>
+                <Button text="Editar" onAction="#handleEditar"/>
+                <Button text="Eliminar" onAction="#handleEliminar"/>
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>
