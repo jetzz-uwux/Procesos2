@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="389.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="389.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progs.proyectobibliotecafx.LoginController">
    <children>
       <SplitPane dividerPositions="0.8" prefHeight="391.0" prefWidth="533.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="364.0" prefWidth="422.0" style="-fx-background-color: #FFFFFF;">
                <children>
-                  <Button layoutX="153.0" layoutY="272.0" mnemonicParsing="false" style="-fx-background-color: #8cb6cf;" text="Iniciar sesión">
+                  <Button layoutX="146.0" layoutY="273.0" mnemonicParsing="false" style="-fx-background-color: #8cb6cf;" text="Iniciar sesión">
                      <styleClass>
                         <String fx:value="boton-redondo" />
                         <String fx:value="fuente-perfectP" />
@@ -23,7 +23,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Button layoutX="14.0" layoutY="328.0" mnemonicParsing="false" style="-fx-background-color: #a5e6a7;" text="Crear cuenta">
+                  <Button fx:id="btn_crearcuenta" layoutX="14.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleCrearCuenta" style="-fx-background-color: #a5e6a7;" text="Crear cuenta">
                      <font>
                         <Font name="Arial" size="14.0" />
                      </font>
@@ -32,22 +32,22 @@
                         <String fx:value="fuente-perfectP" />
                      </styleClass>
                   </Button>
-                  <Label layoutX="104.0" layoutY="68.0" styleClass="fuente-lemon" text="Inicio de Sesión">
+                  <Label layoutX="104.0" layoutY="67.0" styleClass="fuente-lemon" text="Inicio de Sesión">
                      <font>
                         <Font size="24.0" />
                      </font></Label>
-                  <Label layoutX="61.0" layoutY="160.0" styleClass="fuente-perfectP" text="Usuario:">
+                  <Label layoutX="61.0" layoutY="159.0" styleClass="fuente-perfectP" text="Usuario:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="48.0" layoutY="209.0" styleClass="fuente-perfectP" text="Contraseña:">
+                  <Label layoutX="48.0" layoutY="208.0" styleClass="fuente-perfectP" text="Contraseña:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <PasswordField layoutX="139.0" layoutY="208.0" prefHeight="25.0" prefWidth="236.0" />
-                  <TextField fx:id="txtUsuario" layoutX="139.0" layoutY="159.0" prefHeight="25.0" prefWidth="236.0" />
+                  <PasswordField fx:id="txtPassword" layoutX="139.0" layoutY="207.0" prefHeight="25.0" prefWidth="236.0" />
+                  <TextField fx:id="txtUsuario" layoutX="139.0" layoutY="158.0" prefHeight="25.0" prefWidth="236.0" />
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="387.0" prefWidth="129.0" style="-fx-background-color: #8cb6cf;" />
         </items>

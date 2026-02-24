@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -37,7 +37,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="155.0" layoutY="200.0" prefHeight="25.0" prefWidth="236.0" styleClass="fuente-perfectP" />
+                  <TextField fx:id="txtUsuarioNuevo" layoutX="155.0" layoutY="200.0" prefHeight="25.0" prefWidth="236.0" styleClass="fuente-perfectP" />
                   <PasswordField layoutX="155.0" layoutY="249.0" prefHeight="25.0" prefWidth="236.0" />
                   <Button layoutX="190.0" layoutY="295.0" mnemonicParsing="false" style="-fx-background-color: #8cb6cf;" text="Crear">
                      <styleClass>

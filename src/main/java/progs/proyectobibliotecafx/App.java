@@ -7,9 +7,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.text.Font;
 
-/**
- * JavaFX App
- */
 public class App extends Application {
 
     
@@ -17,8 +14,7 @@ public class App extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        // 1. Carga el archivo FXML de tu login
-        // Asegúrate de que el nombre coincida exactamente con tu archivo .fxml
+        // 1. Carga el archivo FXML de del login
         
         Font.loadFont(getClass().getResourceAsStream("/fonts/LEMONMILK-Regular.otf"), 14);
         Font.loadFont(getClass().getResourceAsStream("/fonts/KGPerfectPenmanship.otf"), 14);
