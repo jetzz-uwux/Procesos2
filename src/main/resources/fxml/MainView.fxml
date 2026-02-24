@@ -13,8 +13,8 @@
     <!-- TOP -->
     <top>
         <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 10;">
-         <Button fx:id="btn_atras" onAction="#handleSocios" text="Atrás" />
-            <Button fx:id="btn_socios" onAction="#handleSocios" text="Usuarios" />
+         <Button fx:id="btn_atras" onAction="#handleAtras" text="Atrás" />
+            <Button fx:id="btn_usuario" onAction="#handleUsuarios" text="Usuarios" />
 
             <Region HBox.hgrow="ALWAYS" />
 
