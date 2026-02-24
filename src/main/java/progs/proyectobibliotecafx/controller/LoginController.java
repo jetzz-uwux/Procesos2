@@ -32,11 +32,10 @@ public class LoginController {
             // 1. Obtener la instancia de la base de datos
             SqlLib db = SqlLib.getInstance(null, null, null);
 
-            // 2. USAR TU MÉTODO DE LA BASE DE DATOS
+            // 2. USAR MÉTODO DE LA BASE DE DATOS
             if (db.isValidCredentials(user, pass)) {
                 System.out.println("¡Login exitoso desde la BD!");
 
-                // Aquí podrías cargar la ventana principal después del éxito
                 // loadMainApp(); 
                 
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainView.fxml"));
@@ -89,7 +88,6 @@ public class LoginController {
             // 3. Crear la nueva escena y mostrarla
             Scene scene = new Scene(root);
 
-            // OPCIONAL: Volver a cargar el CSS y las fuentes si es necesario
             scene.getStylesheets().add(getClass().getResource("/fonts/fuentes.css").toExternalForm());
 
             stage.setScene(scene);
