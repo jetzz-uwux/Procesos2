@@ -74,6 +74,26 @@ public class MainViewController {
 
     @FXML
     private void handleNuevo(){
+        try {
+        // 1. Cargar el nuevo archivo FXML
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/AgregarLibro.fxml"));
+        Parent root = loader.load();
+
+        // 2. Obtener el Stage (la ventana) actual desde el botón que se presionó
+        Stage stage = (Stage) btn_nuevo.getScene().getWindow();
+
+        // 3. Crear la nueva escena y mostrarla
+        Scene scene = new Scene(root);
+        
+        // OPCIONAL: Volver a cargar el CSS y las fuentes si es necesario
+        scene.getStylesheets().add(getClass().getResource("/fonts/fuentes.css").toExternalForm());
+        
+        stage.setScene(scene);
+        stage.show();
+        
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
         System.out.println("Nuevo libro");
     }
 
