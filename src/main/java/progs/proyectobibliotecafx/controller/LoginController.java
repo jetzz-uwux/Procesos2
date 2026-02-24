@@ -33,7 +33,6 @@ public class LoginController {
             if (db.isValidCredentials(user, pass)) {
                 System.out.println("¡Login exitoso desde la BD!");
 
-                // Aquí podrías cargar la ventana principal después del éxito
                 // loadMainApp(); 
             } else {
                 // Si la base de datos dice que no coinciden
