@@ -15,14 +15,14 @@
             <Image url="@../img/Agregar%20libro.png" />
          </image>
       </ImageView>
-      <TextField disable="true" layoutX="305.0" layoutY="101.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
-      <TextField layoutX="305.0" layoutY="181.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
-      <TextField layoutX="305.0" layoutY="143.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
-      <TextField layoutX="305.0" layoutY="358.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
-      <TextField layoutX="305.0" layoutY="321.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
-      <TextField layoutX="305.0" layoutY="287.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
-      <TextField layoutX="305.0" layoutY="254.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
-      <TextField layoutX="305.0" layoutY="219.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
+      <TextField fx:id="txt_isbn" disable="true" layoutX="305.0" layoutY="101.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
+      <TextField fx:id="txt_autor" layoutX="305.0" layoutY="181.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
+      <TextField fx:id="txt_titulo" layoutX="305.0" layoutY="143.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
+      <TextField fx:id="txt_ubicacion" layoutX="305.0" layoutY="358.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
+      <TextField fx:id="txt_formato" layoutX="305.0" layoutY="321.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
+      <TextField fx:id="txt_paginas" layoutX="305.0" layoutY="287.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
+      <TextField fx:id="txt_año" layoutX="305.0" layoutY="254.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
+      <TextField fx:id="txt_edicion" layoutX="305.0" layoutY="219.0" prefHeight="27.0" prefWidth="223.0" style="-fx-border-color: orange; -fx-border-radius: 15px; -fx-border-width: .;" />
       <Text layoutX="108.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" textAlignment="JUSTIFY">
          <font>
             <Font name="Century Gothic" size="14.0" />
@@ -63,12 +63,12 @@
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Text>
-      <Button layoutX="156.0" layoutY="458.0" mnemonicParsing="false" style="-fx-background-color: FFDA9C; -fx-border-radius: 15px; -fx-border-width: 2px;" text="Aceptar">
+      <Button fx:id="btn_aceptar" layoutX="156.0" layoutY="458.0" mnemonicParsing="false" onAction="#handleAcept" style="-fx-background-color: FFDA9C; -fx-border-radius: 15px; -fx-border-width: 2px;" text="Aceptar">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="328.0" layoutY="458.0" mnemonicParsing="false" style="-fx-background-color: FFDA9C; -fx-border-radius: 15px; -fx-border-width: 2px;" text="Cancelar">
+      <Button fx:id="btn_cancelar" layoutX="328.0" layoutY="458.0" mnemonicParsing="false" onAction="#handleCancel" style="-fx-background-color: FFDA9C; -fx-border-radius: 15px; -fx-border-width: 2px;" text="Cancelar">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>

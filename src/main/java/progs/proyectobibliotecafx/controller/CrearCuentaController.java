@@ -1,4 +1,4 @@
-package progs.proyectobibliotecafx;
+package progs.proyectobibliotecafx.controller;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
