@@ -10,7 +10,7 @@ import lib.SqlLib;
 import java.sql.SQLException;
 
 public class App extends Application {
-
+    
     private static Scene scene;
 
     @Override
@@ -40,5 +40,5 @@ public class App extends Application {
     public static void main(String[] args) {
         launch(args); // Esto arranca la aplicación JavaFX
     }
-
+    
 }
