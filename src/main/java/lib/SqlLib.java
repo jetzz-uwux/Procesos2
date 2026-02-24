@@ -116,6 +116,40 @@ public class SqlLib {
         }
     }
 
+    // MÉTODO PARA CREAR USUARIO (Registro)
+    public boolean createUser(String username, String password, String role) {
+        // Encriptamos la contraseña antes de mandarla a la BD
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt(12));
+
+        String query = "{ CALL sp_AltaUsuario(?, ?, ?) }";
+        try (PreparedStatement statement = connection.prepareCall(query)) {
+            statement.setString(1, username);
+            statement.setString(2, hashedPassword);
+            statement.setString(3, role);
+            statement.execute();
+            return true;
+        } catch (SQLException e) {
+            System.err.println("Error al crear usuario: " + e.getMessage());
+            return false;
+        }
+    }
+
+    // MÉTODO PARA VALIDAR (Login)
+    public boolean isValidCredentials(String username, String password) throws SQLException {
+        String query = "SELECT contrasena FROM usuario WHERE nombre = ? AND is_deleted = 0";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, username);
+            ResultSet rs = statement.executeQuery();
+
+            if (rs.next()) {
+                String storedHash = rs.getString("contrasena");
+                // Compara la clave de la pantalla con la de la BD
+                return BCrypt.checkpw(password, storedHash);
+            }
+        }
+        return false;
+    }
+
     /* --- CONSULTAS DE DATOS (LECTURA) --- */
     public List<String[]> cargarLibros() {
         List<String[]> lista = new ArrayList<>();
@@ -141,4 +175,5 @@ public class SqlLib {
             connection.close();
         }
     }
+
 }
