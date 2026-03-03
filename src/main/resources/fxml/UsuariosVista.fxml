@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="484.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progs.proyectobibliotecafx.controller.UsuariosVistaController">
+   <children>
+      <TableView fx:id="tbl_usuarios" layoutX="32.0" layoutY="71.0" prefHeight="390.0" prefWidth="430.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="110.39997100830078" text="Usuario" />
+            <TableColumn prefWidth="242.60000610351562" text="Contraseña" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_crear" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" text="Crear" />
+      <Button fx:id="btn_eliminar" layoutX="127.0" layoutY="27.0" mnemonicParsing="false" text="Eliminar" />
+      <Button fx:id="btn_buscar" layoutX="410.0" layoutY="27.0" mnemonicParsing="false" text="Buscar" />
+      <TextField fx:id="txt_buscarUsuario" layoutX="242.0" layoutY="27.0" />
+      <Button fx:id="btn_editar" layoutX="213.0" layoutY="479.0" mnemonicParsing="false" text="Editar" />
+   </children>
+</Pane>
