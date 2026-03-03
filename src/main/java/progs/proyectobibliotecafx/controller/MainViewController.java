@@ -37,19 +37,10 @@ public class MainViewController {
     private TextField txtBuscar;
     
     @FXML
-    private Button btn_reportes;
-    
-    @FXML
-    private Button btn_prestamo;
-    
-    @FXML
-    private Button btn_socios;
+    private Button btn_socios; //Este es botón para entrar a la admin de usuarios, hay que cambiarle nombre para no confundir
 
     @FXML
-    private Button btn_buscar;
-    
-    @FXML
-    private Button btn_prestar;
+    private Button btn_buscar;    
     
     @FXML
     private Button btn_nuevo;
@@ -59,6 +50,10 @@ public class MainViewController {
     
     @FXML
     private Button btn_eliminar;
+    
+    @FXML
+    private Button btn_atras;
+    
     
     @FXML
     public void initialize() {
@@ -120,17 +115,17 @@ public class MainViewController {
         Parent root = loader.load();
 
         // 2. Obtener el Stage (la ventana) actual desde el botón que se presionó
-        Stage stage = (Stage) btn_reportes.getScene().getWindow();
+        //Stage stage = (Stage) btn_reportes.getScene().getWindow();
 
         // 3. Crear la nueva escena y mostrarla
         Scene scene = new Scene(root);
         
         // OPCIONAL: Volver a cargar el CSS y las fuentes si es necesario
         scene.getStylesheets().add(getClass().getResource("/fonts/fuentes.css").toExternalForm());
-        
+        /*
         stage.setScene(scene);
         stage.show();
-        
+        */
     } catch (IOException e) {
         e.printStackTrace();
     }
@@ -145,16 +140,17 @@ public class MainViewController {
         Parent root = loader.load();
 
         // 2. Obtener el Stage (la ventana) actual desde el botón que se presionó
-        Stage stage = (Stage) btn_reportes.getScene().getWindow();
+        //Stage stage = (Stage) btn_reportes.getScene().getWindow();
 
         // 3. Crear la nueva escena y mostrarla
         Scene scene = new Scene(root);
         
         // OPCIONAL: Volver a cargar el CSS y las fuentes si es necesario
         scene.getStylesheets().add(getClass().getResource("/fonts/fuentes.css").toExternalForm());
-        
+        /*
         stage.setScene(scene);
         stage.show();
+        */
         
     } catch (IOException e) {
         e.printStackTrace();
@@ -170,7 +166,7 @@ public class MainViewController {
         Parent root = loader.load();
 
         // 2. Obtener el Stage (la ventana) actual desde el botón que se presionó
-        Stage stage = (Stage) btn_reportes.getScene().getWindow();
+        //Stage stage = (Stage) btn_reportes.getScene().getWindow();
 
         // 3. Crear la nueva escena y mostrarla
         Scene scene = new Scene(root);
@@ -178,8 +174,9 @@ public class MainViewController {
         // OPCIONAL: Volver a cargar el CSS y las fuentes si es necesario
         scene.getStylesheets().add(getClass().getResource("/fonts/fuentes.css").toExternalForm());
         
-        stage.setScene(scene);
+        /*stage.setScene(scene);
         stage.show();
+        */
         
     } catch (IOException e) {
         e.printStackTrace();
