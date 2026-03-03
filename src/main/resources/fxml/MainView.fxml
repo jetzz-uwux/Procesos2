@@ -13,9 +13,8 @@
     <!-- TOP -->
     <top>
         <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 10;">
-            <Button fx:id="btn_reportes" onAction="#handleReportes" text="Reportes" />
-            <Button fx:id="btn_prestamo" onAction="#handlePrestamos" text="Préstamos" />
-            <Button fx:id="btn_socios" onAction="#handleSocios" text="Socios" />
+         <Button fx:id="btn_atras" onAction="#handleSocios" text="Atrás" />
+            <Button fx:id="btn_socios" onAction="#handleSocios" text="Usuarios" />
 
             <Region HBox.hgrow="ALWAYS" />
 
@@ -41,7 +40,6 @@
     <!-- BOTTOM -->
     <bottom>
         <HBox alignment="CENTER" spacing="30" style="-fx-padding: 10;">
-            <Button fx:id="btn_prestar" onAction="#handlePrestar" styleClass="boton-redondo" text="Prestar" />
             <Button fx:id="btn_nuevo" onAction="#handleNuevo" styleClass="boton-redondo" text="Nuevo" />
             <Button fx:id="btn_editar" onAction="#handleEditar" styleClass="boton-redondo" text="Editar" />
             <Button fx:id="btn_eliminar" onAction="#handleEliminar" styleClass="boton-redondo" text="Eliminar" />
