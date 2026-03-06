@@ -12,6 +12,7 @@ import lib.SqlLib;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import lib.CSS;
 
 public class LoginController {
 
@@ -36,22 +37,10 @@ public class LoginController {
             if (db.isValidCredentials(user, pass)) {
                 System.out.println("¡Login exitoso desde la BD!");
 
-                // loadMainApp(); 
-                
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainView.fxml"));
-                Parent root = loader.load();
-
-                // 2. Obtener el Stage (la ventana) actual desde el botón que se presionó
-                Stage stage = (Stage) btn_iniciarsesion.getScene().getWindow();
-
-                // 3. Crear la nueva escena y mostrarla
-                Scene scene = new Scene(root);
-
-                // OPCIONAL: Volver a cargar el CSS y las fuentes si es necesario
-                scene.getStylesheets().add(getClass().getResource("/fonts/fuentes.css").toExternalForm());
-
-                stage.setScene(scene);
-                stage.show();
+                CSS vista = new CSS();
+                vista.cargarVistaCSS(loader, btn_crearcuenta);
+                
             } else {
                 // Si la base de datos dice que no coinciden
                 mostrarAlerta("Error", "Usuario o contraseña incorrectos.");
